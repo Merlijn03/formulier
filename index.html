@@ -1,44 +1,138 @@
 <!DOCTYPE html>
-<html>
-  <head lang="nl">
+<html lang="nl" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Formulier, Merlijn">
-    <meta name="description" content="Merlijn's formulier">
-    <meta name="author" content="Merlijn Smit">
-    <title> Merlijn's formulier </title>
+    <title> Vragenlijst persoonlijk opleidingsplan </title>
+    <style>
+      .welbevinden label {
+        display: inline-block;
+        padding: 1em;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .welbevinden input {
+        display: block;
+      }
+    </style>
   </head>
-  <body lang="nl">
-  <form action=" http://bla.hosts.ma-cloud.nl/pop.php." method="get">
-
-    Naam: <input type="text" name="custname">
-    <br>
-    Stad: <input type="text" name="city">
-    <br>
-    E-mail: <input type="email" name="email">
-    <br>
-  <br>
- <h3>Sterke kanten? </h3>
-  <input type="checkbox" name="CSS" value="CSS"> CSS
-  <input type="checkbox" name="HTML" value="HTML"> HTML
-  <input type="checkbox" name="JavaScript" value="JavaScript"> JavaScript
-  <input type="checkbox" name="PHP" value="PHP"> PHP
-  <br>
-<h3>Favoriete huisdier? </h3>
-   <input type="radio" name="Dierkeuze" value="Kat"> Kat
-   <input type="radio" name="Dierkeuze" value="Hond"> Hond
-   <input type="radio" name="Dierkeuze" value="Hamster"> Hamster
-   <input type="radio" name="Dierkeuze" value="Konijn"> Konijn
-  <br>
-  <br>
-
-  Waar heb je over ons gehoord?
-      <select name="hearAboutUs" >
-         <option value="Internet">Internet</option>
-         <option value="Television">TV</option>
-         <option value="Magazine" selected>Magazine</option>
-     </select>
-     <br>
-    <input type="submit" value="Submit" />
-  </form>
-</body>
+  <body>
+    <h1> Een plan voor jouw ontwikkeling </h1>
+    <p> Om een eerste stap te zetten naar een persoonlijk opleidingsplan zul je eerst een paar vragen voor jezelf moeten beantwoorden. Dit formulier helpt jou daar bij. </p>
+    <form action="http://bla.hosts.ma-cloud.nl/pop.php" method="get">
+      <label> Naam: <input type="text" name="naam" placeholder="bv. Pino Stoepmaker" required autofocus> </label>
+      <br>
+      <label> Email: <input type="email" name="email" placeholder="bv. PinoS@gmail.com" required> </label>
+      <br>
+      <label> Telefoonnummer: <input type="tel" name="telefoonnummer" placeholder="bv. 0694725102" required> </label>
+      <br>
+      <label> Geboortedatum: <input type="date" name="geboortedatum" required> </label>
+      <br>
+      <label>
+        Klas: <select name="Klas:" required>
+          <option value="" disabled selected> Selecteer een klas</option>
+          <option value="MD1A"> MD1A </option>
+          <option value="MD1B"> MD1B </option>
+          <option value="MD1C"> MD1C </option>
+          <option value="MD1D"> MD1D </option>
+        </select>
+      </label>
+      <br>
+      <br>
+      <fieldset class="welbevinden">
+        <legend> Welbevinden op de opleiding </legend>
+        <br>
+        Hoe positief ben je op dit moment over je opleiding?
+        <br>
+        <br>
+        <label> <input type="radio" name="welbevinden" value="0" required> 0 </label>
+        <label> <input type="radio" name="welbevinden" value="1"> 1 </label>
+        <label> <input type="radio" name="welbevinden" value="2"> 2 </label>
+        <label> <input type="radio" name="welbevinden" value="3"> 3 </label>
+        <label> <input type="radio" name="welbevinden" value="4"> 4 </label>
+        <label> <input type="radio" name="welbevinden" value="5"> 5 </label>
+        <label> <input type="radio" name="welbevinden" value="6"> 6 </label>
+        <label> <input type="radio" name="welbevinden" value="7"> 7 </label>
+        <label> <input type="radio" name="welbevinden" value="8"> 8 </label>
+        <label> <input type="radio" name="welbevinden" value="9"> 9 </label>
+        <label> <input type="radio" name="welbevinden" value="10"> 10 </label>
+        <br>
+        Hoe gemotiveerd ben je momenteel om de opleiding af te maken?
+        <br>
+        <br>
+        <label> <input type="radio" name="gemotiveerd" value="0" required> 0 </label>
+        <label> <input type="radio" name="gemotiveerd" value="1"> 1 </label>
+        <label> <input type="radio" name="gemotiveerd" value="2"> 2 </label>
+        <label> <input type="radio" name="gemotiveerd" value="3"> 3 </label>
+        <label> <input type="radio" name="gemotiveerd" value="4"> 4 </label>
+        <label> <input type="radio" name="gemotiveerd" value="5"> 5 </label>
+        <label> <input type="radio" name="gemotiveerd" value="6"> 6 </label>
+        <label> <input type="radio" name="gemotiveerd" value="7"> 7 </label>
+        <label> <input type="radio" name="gemotiveerd" value="8"> 8 </label>
+        <label> <input type="radio" name="gemotiveerd" value="9"> 9 </label>
+        <label> <input type="radio" name="gemotiveerd" value="10"> 10 </label>
+        <br>
+        Hoeveel vertrouwen heb je momenteel in je eigen kunnen?
+        <br>
+        <br>
+        <label> <input type="radio" name="vertrouwen" value="0" required> 0 </label>
+        <label> <input type="radio" name="vertrouwen" value="1"> 1 </label>
+        <label> <input type="radio" name="vertrouwen" value="2"> 2 </label>
+        <label> <input type="radio" name="vertrouwen" value="3"> 3 </label>
+        <label> <input type="radio" name="vertrouwen" value="4"> 4 </label>
+        <label> <input type="radio" name="vertrouwen" value="5"> 5 </label>
+        <label> <input type="radio" name="vertrouwen" value="6"> 6 </label>
+        <label> <input type="radio" name="vertrouwen" value="7"> 7 </label>
+        <label> <input type="radio" name="vertrouwen" value="8"> 8 </label>
+        <label> <input type="radio" name="vertrouwen" value="9"> 9 </label>
+        <label> <input type="radio" name="vertrouwen" value="10"> 10 </label>
+      </fieldset>
+      <fieldset class="sterke_kanten">
+        <legend> Sterke kanten </legend>
+        <p> Wat zijn je sterke kanten in programmeren? </p>
+        <label> <input type="checkbox" name="sterke_kanten" value="HTML/CSS"> Coderen in HTML/CSS </label>
+        <label> <input type="checkbox" name="sterke_kanten" value="Java"> Programmeren in Java </label>
+        <label> <input type="checkbox" name="sterke_kanten" value="JavaScript"> Scripting: programmeren in JavaScript </label>
+        <label> <input type="checkbox" name="sterke_kanten" value="Planning"> Planning </label>
+        <label> <input type="checkbox" name="sterke_kanten" value="Samenwerken"> Samenwerken </label>
+      </fieldset>
+      <fieldset class="te_ontwikkelen">
+        <legend> Nog te ontwikkelen </legend>
+        <p> Aan welke skills moet je nog extra aandacht besteden? </p>
+        <label> <input type="checkbox" name="te_ontwikkelen" value="HTML/CSS"> Coderen in HTML/CSS </label>
+        <label> <input type="checkbox" name="te_ontwikkelen" value="Java"> Programmeren in Java </label>
+        <label> <input type="checkbox" name="te_ontwikkelen" value="JavaScript"> Scripting: programmeren in JavaScript </label>
+        <label> <input type="checkbox" name="te_ontwikkelen" value="Planning"> Planning </label>
+        <label> <input type="checkbox" name="te_ontwikkelen" value="Samenwerken"> Samenwerken </label>
+      </fieldset>
+      <fieldset class="vakken">
+        <legend> Vakken </legend>
+        <p> Als je een vak weg zou mogen halen, welke zou dat zijn? </p>
+        <label> <input type="radio" name="vakken" value="NED" required> NED </label>
+        <label> <input type="radio" name="vakken" value="REK"> REK </label>
+        <label> <input type="radio" name="vakken" value="ENG"> ENG </label>
+        <label> <input type="radio" name="vakken" value="PROJ"> PROJ </label>
+        <label> <input type="radio" name="vakken" value="UXD"> UXD </label>
+        <label> <input type="radio" name="vakken" value="FRO"> FRO </label>
+        <label> <input type="radio" name="vakken" value="BAP"> BAP </label>
+        <label> <input type="radio" name="vakken" value="SLB"> SLB </label>
+        <label> <input type="radio" name="vakken" value="BUR"> BUR </label>
+        <label> <input type="radio" name="vakken" value="DIFF"> DIFF </label>
+        <label> <input type="radio" name="vakken" value="WVO-S"> WVO-S </label>
+        <p> Waarom zou je dit vak willen weghalen? </p>
+        <textarea name="waarom_weghalen" rows="4" cols="50"></textarea>
+      </fieldset>
+      <p> Wat zijn jouw plannen voor de toekomst? </p>
+      <textarea name="waarom_weghalen" rows="4" cols="50"></textarea>
+      <br>
+      <br>
+      <input type="submit" name="" value="Verstuur">
+      <br>
+      <br>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+      <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS"></a>
+      <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+      <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+    </form>
+  </body>
 </html>
